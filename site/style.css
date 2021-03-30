@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: "Nunito", Arial, Helvetica, sans-serif;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: none;
+    z-index: -1;
+  }
+
+  .video-container > video {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    min-width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+     
+  }
+
+  .container-wrap{
+      background-color: rgba(0,0,0,.50);
+      opacity: 1;
+  }
+
+  .principal{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 94.4vh;
+      flex-wrap: wrap;
+  }
+
+  .imagem{
+      position: absolute;
+      display: inline;
+  }
+
+  #iM, #iE, #iG{
+    width: 50px;
+  }  
+
+  .embreve{
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  h1{
+      font-size: 7rem;
+  }
+
+  p{
+      font-size: 2.25rem;
+  }
+
+  .footer{
+    background-color: #101010;  
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+  }
+
+  a{
+      text-decoration: none;
+      color: white;
+  }
+  
+  @media screen and (max-aspect-ratio: 1920/1080) {
+    .video-container > video {
+      height: 100%;
+    }
+  }
+  @media screen and (min-aspect-ratio: 1920/1080) {
+    .video-container > video {
+      width: 100%;
+    }
+  }
+  
+  #play{
+      z-index: 2;
+      color: white;
+      width: 100px;
+      position: absolute;
+      display: none;
+      justify-content:center;
+      align-items:center;
+      top: 50%;
+      left:50%;
+      margin-top: -50px;
+      margin-left: -50px;
+  }
+  
